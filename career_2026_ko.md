@@ -2,7 +2,7 @@
 
 Project Manager / PL
 
-[LinkedIn](https://www.linkedin.com/in/%EB%AF%B8%ED%98%9C-%EA%B0%95-1a29ba2b9/) | [인터뷰](https://m.blog.naver.com/ktds_official/222818903896)
+kangmihye@gmail.com | [LinkedIn](https://www.linkedin.com/in/%EB%AF%B8%ED%98%9C-%EA%B0%95-1a29ba2b9/) | [인터뷰](https://m.blog.naver.com/ktds_official/222818903896)
 
 ## 경력 요약
 
