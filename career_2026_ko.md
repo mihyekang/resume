@@ -44,7 +44,7 @@ GPU 미확보라는 사업 제약을 아키텍처 결정으로 흡수했습니�
 ### 연동 규격 및 아키텍처 의사결정
 
 - 외부 소스 필드 전수 조사 기반의 연동 스키마 표준화 및 규격서 확정
-- Pull 기반 SFTP 등 조직 간 결합도를 낮추는 연동 구조 채택
+- 실시간 API 등 조직 간 결합도를 낮추는 연동 구조 채택
 - 데이터 품질 판단과 디스플레이 정책의 책임 경계 정의
 - HTTP 전제 가이드가 없던 TCP 연동 아키텍처를 다자 논의로 확정해 프로젝트 표준 채택
 
@@ -92,12 +92,12 @@ KT 그룹의 대고객 서비스와 내부 플랫폼을 대상으로 PM과 PL �
 
 kt(PO), ktds 개발팀, 협력사 3자 구조의 미디어 에이전트(MA) 연동 프로젝트입니다. 권한 밖 영향력으로 아키텍처 트레이드오프를 각 조직의 언어로 번역해 의사결정을 이끌어내는 기술 통합 리드를 맡고 있습니다.
 
-**기술 스택:** Whisper(STT, 자체 호스팅), Gemini 3.1 Flash API, LLM 오케스트레이션, SFTP(Pull 기반 연동), TMDB 외부 API, Confluence
+**기술 스택:** Whisper(STT, 자체 호스팅), Gemini 3.1 Flash API, LLM 오케스트레이션, 실시간 API 연동, TMDB 외부 API, Confluence
 
 **주요 역할**
 
 - TMDB 등 외부 소스 필드 전수 조사 후 노이즈 필드(`status`, `vote_average`, `popularity`)를 배제하고 `contentId`, `title`, `releaseDate`, `synopsis` 중심으로 MA 연동 규격서 확정
-- 자사가 파일을 적재하고 MA가 폴링으로 가져가는 Pull 기반 SFTP 연동 구조 채택
+- 자사가 파일을 적재하고 MA가 실시간 API로 가져가는 연동 구조 채택
 - 데이터 품질 판단과 디스플레이 정책을 MA 측 책임으로 이관해 양쪽이 독립 개발 가능한 구조 확립
 - 방송 영상에서 STT(Whisper medium), Contents Agent 오케스트레이션, Gemini 3.1 Flash, MA 전송으로 이어지는 캐스케이드 파이프라인을 개발팀과 함께 확정
 - GPU 미확보 환경에서 오픈소스 모델(QWEN) 운영 불가로 판단하고 API 기반 Gemini Flash 단일 처리 구조로 전환
@@ -252,7 +252,7 @@ KT 영업전산 영역의 CRM 시스템을 운영하고 개발했습니다. Sieb
 ## 기술
 
 - **클라우드 / 인프라:** Azure, Kubernetes(AKS), Rancher, Kustomize, ArgoCD, Microsoft Entra ID
-- **연동 / 아키텍처:** SFTP(Pull 기반), TCP/MQTT, REST API, 기간계 시스템 연동, DCAT/RDF 메타데이터 표준
+- **연동 / 아키텍처:** REST API, TCP/MQTT, 기간계 시스템 연동, DCAT/RDF 메타데이터 표준
 - **AI / 데이터:** Whisper(STT), Gemini API, LLM 오케스트레이션, MicroStrategy(BI), 챗봇 시나리오 설계
 - **개발:** Java/JSP, Siebel CRM, PostgreSQL, MariaDB, MySQL
 - **프로젝트 관리:** Jira, Confluence, 리스크 레지스터, 진척 지표 설계, 마일스톤 관리, 요구사항 인터뷰 설계
