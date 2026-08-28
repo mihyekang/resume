@@ -147,7 +147,7 @@ kt(PO), ktds 개발팀, 협력사 3자 구조의 미디어 에이전트(MA) 연�
 - TCP 연동 아키텍처를 프로젝트 전체 표준으로 채택
 - Kubernetes Manifest 작성과 환경 설정 직접 참여로 핵심 지연 구간 해소
 - Confluence 진척 추적표를 통해 Manifest 진행률 99.8%까지 추적 및 관리
-- VM 강제 종료 시 etcd 상태값이 반영되지 않는 것이 StatefulSet 미기동 원인임을 확인하고 검증
+- Node 강제 종료 시 kube-apiserver 쓰기 불가로 etcd 상태값이 반영되지 않는 것이 StatefulSet 미기동 원인임을 확인하고 해소 
 
 #### KTDS 전사 ITO 사업구조혁신 TF | TF 참여 및 현업 문제 분석 | 2024.06-2024.12
 
